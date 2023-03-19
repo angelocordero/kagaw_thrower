@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:project_catapult_client/screens/control_screen.dart';
 import 'package:web_socket_channel/web_socket_channel.dart';
+
+import 'control_screen.dart';
 
 class InputScreen extends StatefulWidget {
   const InputScreen({super.key});
@@ -91,5 +92,3 @@ class _InputScreenState extends State<InputScreen> {
     );
   }
 }
-
-

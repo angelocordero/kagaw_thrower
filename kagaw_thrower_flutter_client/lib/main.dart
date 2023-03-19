@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:project_catapult_client/screens/input_screen.dart';
+
+import 'screens/input_screen.dart';
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();

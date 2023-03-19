@@ -15,8 +15,8 @@ enum PullMotorStatus {
 };
 
 // wifi constants
-const char *ssid = "itlog";
-const char *password = "hotdog";
+const char *ssid = "itlog2323";
+const char *password = "hotdog1234";
 
 AsyncWebServer server(80);
 AsyncWebSocket webSocket("/ws");
@@ -93,7 +93,7 @@ void WsDataEventHandler(void *arg, uint8_t *data, size_t len) {
   if (info->final && info->index == 0 && info->len == len && info->opcode == WS_TEXT) {
     data[len] = 0;
 
-    ArmMotorEventHandler(data);
+   // ArmMotorEventHandler(data);
     TestEventHandler(data);
   }
 }
@@ -116,13 +116,6 @@ void ArmMotorEventHandler(uint8_t *data) {
 
 void TestEventHandler(uint8_t *data) {
 
-  if (strcmp((char *)data, "") == 0) {
-
-    Serial.println("Test0");
-  } else if (strcmp((char *)data, "Test1") == 0) {
-
-    Serial.println("Test1");
-  } else {
-    Serial.println((char *)data);
-  }
+  Serial.println((char *)data);
+  
 }
